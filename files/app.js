@@ -3,7 +3,7 @@ var list=document.getElementById('list')
 function addTodo(){
     var todo_task=document.getElementById('todoItem')
     
-
+    // creating li tag to add todo task
     var li=document.createElement('li')
     var listText=document.createTextNode(todo_task.value)
     li.appendChild(listText)
@@ -37,6 +37,7 @@ function delTodo(){
     list.innerHTML=""
 }
 function editItem(e){
+    //shows alert to change the todo task
     var editVal=prompt("Edit your task",e.parentNode.firstChild.nodeValue)
     e.parentNode.firstChild.nodeValue=editVal
 }
